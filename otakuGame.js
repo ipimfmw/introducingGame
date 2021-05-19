@@ -7,6 +7,7 @@ const otakuGame = (function(){
             choiceContainer.addEventListener('click', ()=>{
                 choice.render();
             });
+            document.querySelector('#footer-container').appendChild(choiceContainer);
         });
     };
     const delay = ms => {
@@ -24,7 +25,10 @@ const otakuGame = (function(){
                 messageContainer.classList.add('user-message')
             }
             if(this.type === 'SYSTEM'){
-                await delay(1000);
+                await delay(100);
+            }
+            if(choices){
+                renderFooter(choices);
             }
             document.querySelector('#content-container').appendChild(messageContainer);
         }
@@ -43,7 +47,7 @@ const otakuGame = (function(){
         document.body.appendChild(container);
 
         kk = new messageBlock({text: '나는 재웅이다옹', type: 'USER'})
-        tt= new messageBlock({text: 'hi', choices=[kk]});
+        tt= new messageBlock({text: 'hi', choices: [kk]});
         await tt.render();
         
         pp = new messageBlock({text: 'hello'});

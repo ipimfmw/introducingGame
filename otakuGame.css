@@ -23,8 +23,12 @@ html {
 }
 
 #footer-container {
+  background-color: #dadada;
   display: flex;
+  flex-direction: column;
   flex: 1 1 0;
+  /* border-top: 1px solid #d3d3d3; */
+  justify-content: center;
 }
 
 .message-container {
@@ -44,15 +48,19 @@ html {
   align-self: flex-end;
 }
 
-.choice-container {
-  background-color: white;
+.choice-item-container {
+  display: flex;
+  background-color: rgb(174, 206, 243);
   border: 1px solid #dadada;
+  margin: 10px;
+  padding: 7px;
+  border-radius: 10px;
   text-align: left;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.choice-container:hover {
-  background-color: steelblue;
+.choice-item-container:hover {
+  background-color: rgb(77, 169, 245);
 }
 
 ::-webkit-scrollbar {

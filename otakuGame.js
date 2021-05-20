@@ -49,6 +49,9 @@ const otakuGame = (function () {
         // await delay(1000);
         next.render();
       }
+      document
+        .querySelector("#content-container")
+        .scroll(0, document.querySelector("#content-container").offsetHeight);
     };
   };
   const init = async () => {
